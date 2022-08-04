@@ -2,7 +2,7 @@ from statement_import.natwest_csv import read_csv
 
 
 def test_csv_read():
-    data = read_csv("test_natwest.csv")
+    data = read_csv("tests/test_natwest.csv")
     assert len(data) == 1
 
     row = data[0]
