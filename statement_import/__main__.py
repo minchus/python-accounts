@@ -50,9 +50,9 @@ args = parser.parse_args()
 
 if args.test:
     logging.warning("Running in test mode")
-    DATA_DIR = r"E:\Dropbox\Accounts\python-accounts\data"
+    DATA_DIR = r"data_test"
 else:
-    DATA_DIR = r"E:\Dropbox\Accounts\python-accounts\data_test"
+    DATA_DIR = r"E:\Dropbox\Accounts\python-accounts\data"
 
 DB_PATH = join(DATA_DIR, "mchung_accounts.db")
 IMPORT_DIR = join(DATA_DIR, "import")
