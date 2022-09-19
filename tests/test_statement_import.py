@@ -1,4 +1,4 @@
-from statement_import.natwest_csv import read_csv
+from python_accounts.banks.natwest import read_csv
 
 
 def test_csv_read():

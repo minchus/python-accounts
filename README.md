@@ -4,11 +4,26 @@ Import CSV statements into a database for analysis
 
 ## Usage
 ```
-usage: python -m statement_import [-h] [-f FILE] [-d DIR] [-t]
+Usage: load [OPTIONS]
 
-options:
-  -h, --help            show this help message and exit
-  -f FILE, --file FILE  Path to csv file to import
-  -d DIR, --dir DIR     Import directory
-  -t, --test            Test mode
+Options:
+  -c, --config FILE   Read option defaults from the specified INI file
+                      [default: config/default.ini]
+  -f, --file FILE
+  -i, --in-dir PATH   Input directory  [required]
+  -o, --out-dir PATH  Directory for processed files  [required]
+  -d, --db-path FILE  Path to sqlite DB file  [required]
+  --help              Show this message and exit.
+```
+
+## Development
+```
+pyenv local 3.10.7
+poetry install
+poetry run load [OPTIONS]
+```
+
+### Run tests
+```
+poetry run pytest
 ```
